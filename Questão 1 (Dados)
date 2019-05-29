@@ -1,0 +1,976 @@
+
+pi@raspberrypi:~ $ iwconfig
+eth0      no wireless extensions.
+
+lo        no wireless extensions.
+
+wlan0     IEEE 802.11bgn  ESSID:"ICOMP_2A"  Nickname:"<WIFI@REALTEK>"
+          Mode:Managed  Frequency:2.462 GHz  Access Point: 10:FE:ED:89:30:77   
+          Bit Rate:72.2 Mb/s   Sensitivity:0/0  
+          Retry:off   RTS thr:off   Fragment thr:off
+          Power Management:off
+          Link Quality=100/100  Signal level=88/100  Noise level=0/100
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+pi@raspberrypi:~ $ sudo apt-get install iperf
+Lendo listas de pacotes... Pronto
+Construindo árvore de dependências       
+Lendo informação de estado... Pronto
+Os NOVOS pacotes a seguir serão instalados:
+  iperf
+0 pacotes atualizados, 1 pacotes novos instalados, 0 a serem removidos e 0 não atualizados.
+É preciso baixar 54,7 kB de arquivos.
+Depois desta operação, 151 kB adicionais de espaço em disco serão usados.
+Obter:1 http://mirror.nbtelecom.com.br/raspberryPI/raspbian stretch/main armhf iperf armhf 2.0
++dfsg1-1 [54,7 kB]
+Baixados 54,7 kB em 7s (7.404 B/s)
+A seleccionar pacote anteriormente não seleccionado iperf.
+(Lendo banco de dados ... 133432 ficheiros e directórios actualmente instalados.)
+A preparar para desempacotar .../iperf_2.0.9+dfsg1-1_armhf.deb ...
+A descompactar iperf (2.0.9+dfsg1-1) ...
+Configurando iperf (2.0.9+dfsg1-1) ...
+A processar 'triggers' para man-db (2.7.6.1-2) ...
+pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43122 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-13.0 sec   481 KBytes   303 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43124 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-11.0 sec   640 KBytes   475 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43126 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-11.6 sec   512 KBytes   362 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43128 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-11.0 sec   640 KBytes   476 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43130 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.8 sec   768 KBytes   585 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43132 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.3 sec  2.00 MBytes  1.63 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43134 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.4 sec  2.25 MBytes  1.82 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43136 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.25 MBytes  1.88 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43138 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.8 sec  2.38 MBytes  1.84 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43140 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  2.12 MBytes  1.76 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43142 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  2.88 MBytes  2.40 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43144 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.4 sec  1.88 MBytes  1.51 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43146 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.3 sec  1.12 MBytes   918 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43148 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  1.50 MBytes  1.25 Mbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43150 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-13.8 sec   308 KBytes   183 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43152 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-12.9 sec   328 KBytes   209 Kbits/sec
+pi@raspberrypi:~ $ iperf -c 192.168.1.1
+------------------------------------------------------------
+Client connecting to 192.168.1.1, TCP port 5001
+TCP window size: 43.8 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43154 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-14.6 sec   469 KBytes   264 Kbits/sec
+pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 54735 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec   946 KBytes   765 Kbits/sec
+[  3] Sent 659 datagrams
+[  3] Server Report:
+[  3]  0.0-11.1 sec   848 KBytes   627 Kbits/sec  47.707 ms   68/  659 (10%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 48350 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.9 sec   436 KBytes   328 Kbits/sec
+[  3] Sent 304 datagrams
+[  3] WARNING: did not receive ack of last datagram after 10 tries.
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 50184 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.8 sec   798 KBytes   608 Kbits/sec
+[  3] Sent 556 datagrams
+[  3] WARNING: did not receive ack of last datagram after 10 tries.
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 39738 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec   639 KBytes   519 Kbits/sec
+[  3] Sent 445 datagrams
+[  3] Server Report:
+[  3]  0.0-10.8 sec   537 KBytes   406 Kbits/sec  21.191 ms   71/  445 (16%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 39925 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.53 MBytes  2.96 Mbits/sec
+[  3] Sent 2520 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  3.44 MBytes  2.81 Mbits/sec   8.388 ms   68/ 2520 (2.7%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 56267 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  3.57 MBytes  2.92 Mbits/sec   7.080 ms    5/ 2552 (0.2%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 33772 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.58 MBytes  3.01 Mbits/sec   3.584 ms    0/ 2552 (0%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 45827 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.58 MBytes  3.01 Mbits/sec   3.646 ms    1/ 2552 (0.039%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 45833 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.4 sec   663 KBytes   522 Kbits/sec
+[  3] Sent 462 datagrams
+[  3] Server Report:
+[  3]  0.0-11.7 sec   567 KBytes   397 Kbits/sec  52.774 ms   67/  462 (15%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 44986 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-11.2 sec   685 KBytes   501 Kbits/sec
+[  3] Sent 477 datagrams
+[  3] WARNING: did not receive ack of last datagram after 10 tries.
+pi@raspberrypi:~ $ 
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 55967 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec   932 KBytes   761 Kbits/sec
+[  3] Sent 649 datagrams
+[  3] Server Report:
+[  3]  0.0-11.4 sec   837 KBytes   600 Kbits/sec  30.512 ms   66/  649 (10%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 49654 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.56 MBytes  2.98 Mbits/sec   6.266 ms   10/ 2552 (0.39%)
+pi@raspberrypi:~ $ ^C
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 33035 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.58 MBytes  3.01 Mbits/sec   4.552 ms    0/ 2552 (0%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 34115 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0- 9.9 sec  3.56 MBytes  3.01 Mbits/sec   2.797 ms   14/ 2552 (0.55%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 44918 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec   5.092 ms    0/ 2552 (0%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 40717 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0- 9.9 sec  3.53 MBytes  2.99 Mbits/sec   2.915 ms   31/ 2552 (1.2%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 50789 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.31 MBytes  2.77 Mbits/sec
+[  3] Sent 2360 datagrams
+[  3] Server Report:
+[  3]  0.0-10.1 sec  3.24 MBytes  2.70 Mbits/sec  12.650 ms   47/ 2360 (2%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 35436 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.96 MBytes  2.47 Mbits/sec
+[  3] Sent 2108 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  2.86 MBytes  2.32 Mbits/sec   7.662 ms   70/ 2108 (3.3%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 41064 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.25 MBytes  2.73 Mbits/sec
+[  3] Sent 2318 datagrams
+[  3] Server Report:
+[  3]  0.0-10.6 sec  3.25 MBytes  2.57 Mbits/sec  59.326 ms    1/ 2318 (0.043%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 55654 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-11.4 sec  1.11 MBytes   817 Kbits/sec
+[  3] Sent 795 datagrams
+[  3] Server Report:
+[  3]  0.0-12.9 sec  1.02 MBytes   664 Kbits/sec  117.676 ms   68/  795 (8.6%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 56524 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  2.21 MBytes  1.84 Mbits/sec
+[  3] Sent 1576 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  2.10 MBytes  1.72 Mbits/sec   9.152 ms   76/ 1576 (4.8%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 51267 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.60 MBytes  2.18 Mbits/sec
+[  3] Sent 1856 datagrams
+[  3] Server Report:
+[  3]  0.0- 9.6 sec  2.47 MBytes  2.15 Mbits/sec  29.355 ms   91/ 1856 (4.9%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 56501 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0- 9.9 sec  3.40 MBytes  2.87 Mbits/sec   2.931 ms  126/ 2552 (4.9%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 59675 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.57 MBytes  2.99 Mbits/sec   4.607 ms    2/ 2552 (0.078%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 49349 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0- 9.9 sec  3.53 MBytes  2.98 Mbits/sec   5.996 ms   35/ 2552 (1.4%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 36538 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-11.0 sec  3.49 MBytes  2.66 Mbits/sec  11.202 ms   60/ 2553 (2.4%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m   
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 37834 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.41 MBytes  2.85 Mbits/sec   4.498 ms  123/ 2552 (4.8%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m   
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 47122 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.58 MBytes  3.00 Mbits/sec
+[  3] Sent 2552 datagrams
+[  3] Server Report:
+[  3]  0.0-10.2 sec  3.57 MBytes  2.95 Mbits/sec   5.082 ms    3/ 2552 (0.12%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 3m   
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 3920.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 43637 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  3.51 MBytes  2.92 Mbits/sec
+[  3] Sent 2501 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.38 MBytes  2.82 Mbits/sec  10.089 ms   92/ 2501 (3.7%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 45841 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  4.71 MBytes  3.90 Mbits/sec
+[  3] Sent 3362 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  4.61 MBytes  3.75 Mbits/sec  20.628 ms   75/ 3362 (2.2%)
+[  3] 0.00-10.32 sec  8 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 34405 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec   218 KBytes   178 Kbits/sec
+[  3] Sent 152 datagrams
+[  3] Server Report:
+[  3]  0.0- 1.9 sec   198 KBytes   849 Kbits/sec  23.634 ms  978/ 1116 (88%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 37062 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.76 MBytes  3.15 Mbits/sec
+[  3] Sent 2682 datagrams
+[  3] Server Report:
+[  3]  0.0-10.0 sec  3.56 MBytes  2.98 Mbits/sec   4.986 ms  146/ 2682 (5.4%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 56379 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.80 MBytes  2.35 Mbits/sec
+[  3] Sent 1997 datagrams
+[  3] Server Report:
+[  3]  0.0-10.1 sec  2.45 MBytes  2.04 Mbits/sec  18.639 ms  248/ 1997 (12%)
+[  3] 0.00-10.10 sec  4 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 57124 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  1.75 MBytes  1.47 Mbits/sec
+[  3] Sent 1249 datagrams
+[  3] Server Report:
+[  3]  0.0-11.2 sec  1.61 MBytes  1.20 Mbits/sec  38.488 ms  104/ 1249 (8.3%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 59094 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  1.65 MBytes  1.38 Mbits/sec
+[  3] Sent 1176 datagrams
+[  3] Server Report:
+[  3]  0.0- 8.8 sec  1.08 MBytes  1.03 Mbits/sec  41.681 ms  406/ 1179 (34%)
+[  3] 0.00-8.81 sec  1 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 46176 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  1.15 MBytes   959 Kbits/sec
+[  3] Sent 818 datagrams
+[  3] Server Report:
+[  3]  0.0-10.8 sec   668 KBytes   504 Kbits/sec  39.693 ms  355/  820 (43%)
+[  3] 0.00-10.84 sec  7 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 38787 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.2 sec  4.94 MBytes  4.06 Mbits/sec
+[  3] Sent 3525 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  4.48 MBytes  3.65 Mbits/sec  15.545 ms  332/ 3525 (9.4%)
+[  3] 0.00-10.29 sec  4 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 54333 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  8.68 MBytes  7.26 Mbits/sec
+[  3] Sent 6193 datagrams
+[  3] Server Report:
+[  3]  0.0-11.5 sec  6.42 MBytes  4.68 Mbits/sec   6.735 ms 1615/ 6193 (26%)
+[  3] 0.00-11.51 sec  5 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 46863 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  8.49 MBytes  7.12 Mbits/sec
+[  3] Sent 6055 datagrams
+[  3] Server Report:
+[  3]  0.0-11.2 sec  7.50 MBytes  5.63 Mbits/sec   2.616 ms  705/ 6055 (12%)
+[  3] 0.00-11.18 sec  10 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 34605 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.90 MBytes  2.44 Mbits/sec
+[  3] Sent 2071 datagrams
+[  3] WARNING: did not receive ack of last datagram after 10 tries.
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 10m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 1176.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 53719 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  2.19 MBytes  1.82 Mbits/sec
+[  3] Sent 1559 datagrams
+[  3] Server Report:
+[  3]  0.0-10.1 sec  2.07 MBytes  1.72 Mbits/sec  10.072 ms   85/ 1559 (5.5%)
+pi@raspberrypi:~ $ ^C
+pi@raspberrypi:~ $ ^C
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 58857 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.2 sec  4.55 MBytes  3.75 Mbits/sec
+[  3] Sent 3245 datagrams
+[  3] Server Report:
+[  3]  0.0-10.5 sec  4.45 MBytes  3.55 Mbits/sec  12.176 ms   68/ 3245 (2.1%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 37212 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  3.29 MBytes  2.74 Mbits/sec
+[  3] Sent 2349 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  3.15 MBytes  2.56 Mbits/sec  14.763 ms  100/ 2349 (4.3%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 54905 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.41 MBytes  2.85 Mbits/sec
+[  3] Sent 2430 datagrams
+[  3] Server Report:
+[  3]  0.0-10.6 sec  3.30 MBytes  2.62 Mbits/sec   9.633 ms   78/ 2430 (3.2%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 40727 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-11.5 sec  3.15 MBytes  2.30 Mbits/sec
+[  3] Sent 2244 datagrams
+[  3] WARNING: did not receive ack of last datagram after 10 tries.
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 44103 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  2.96 MBytes  2.47 Mbits/sec
+[  3] Sent 2110 datagrams
+[  3] Server Report:
+[  3]  0.0-11.1 sec  2.25 MBytes  1.70 Mbits/sec   7.178 ms  507/ 2110 (24%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 49410 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.39 MBytes  2.84 Mbits/sec
+[  3] Sent 2415 datagrams
+[  3] Server Report:
+[  3]  0.0-11.1 sec  3.35 MBytes  2.53 Mbits/sec  12.254 ms   27/ 2415 (1.1%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 38325 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.21 MBytes  1.85 Mbits/sec
+[  3] Sent 1577 datagrams
+[  3] Server Report:
+[  3]  0.0-10.7 sec  2.06 MBytes  1.61 Mbits/sec  12.240 ms  109/ 1577 (6.9%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 36099 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  2.83 MBytes  2.37 Mbits/sec
+[  3] Sent 2019 datagrams
+[  3] Server Report:
+[  3]  0.0-10.4 sec  2.69 MBytes  2.17 Mbits/sec   2.513 ms   97/ 2019 (4.8%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 46484 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.5 sec  3.72 MBytes  2.97 Mbits/sec
+[  3] Sent 2654 datagrams
+[  3] Server Report:
+[  3]  0.0-11.1 sec  3.62 MBytes  2.74 Mbits/sec  52.268 ms   75/ 2654 (2.8%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 41958 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.2 sec  3.00 MBytes  2.47 Mbits/sec
+[  3] Sent 2137 datagrams
+[  3] Server Report:
+[  3]  0.0-10.5 sec  2.99 MBytes  2.39 Mbits/sec  18.978 ms    7/ 2137 (0.33%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 44943 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.4 sec   807 KBytes   635 Kbits/sec
+[  3] Sent 562 datagrams
+[  3] Server Report:
+[  3]  0.0-11.3 sec   791 KBytes   574 Kbits/sec  63.504 ms   11/  562 (2%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 15m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 784.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 49883 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.40 MBytes  2.84 Mbits/sec
+[  3] Sent 2422 datagrams
+[  3] Server Report:
+[  3]  0.0-10.2 sec  3.29 MBytes  2.71 Mbits/sec   6.964 ms   72/ 2422 (3%)
+[  3] 0.00-10.19 sec  7 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 48836 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.2 sec  2.61 MBytes  2.15 Mbits/sec
+[  3] Sent 1862 datagrams
+[  3] Server Report:
+[  3]  0.0-11.2 sec  2.29 MBytes  1.72 Mbits/sec  23.502 ms  225/ 1862 (12%)
+pi@raspberrypi:~ $ ^C
+pi@raspberrypi:~ $ ^C
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 37559 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.12 MBytes  2.62 Mbits/sec
+[  3] Sent 2227 datagrams
+[  3] Server Report:
+[  3]  0.0-10.2 sec  3.01 MBytes  2.47 Mbits/sec  12.904 ms   83/ 2227 (3.7%)
+[  3] 0.00-10.22 sec  2 datagrams received out-of-order
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 33108 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.2 sec  2.32 MBytes  1.91 Mbits/sec
+[  3] Sent 1658 datagrams
+[  3] Server Report:
+[  3]  0.0- 9.1 sec  2.29 MBytes  2.11 Mbits/sec  41.964 ms   23/ 1658 (1.4%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 52856 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  3.42 MBytes  2.85 Mbits/sec
+[  3] Sent 2436 datagrams
+[  3] Server Report:
+[  3]  0.0-11.4 sec  3.24 MBytes  2.39 Mbits/sec  29.603 ms  122/ 2436 (5%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 60728 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.5 sec   775 KBytes   607 Kbits/sec
+[  3] Sent 540 datagrams
+[  3] Server Report:
+[  3]  0.0-10.9 sec   768 KBytes   579 Kbits/sec  100.164 ms    5/  540 (0.93%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 40096 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  3.78 MBytes  3.14 Mbits/sec
+[  3] Sent 2695 datagrams
+[  3] Server Report:
+[  3]  0.0-10.5 sec  3.65 MBytes  2.92 Mbits/sec  17.400 ms   91/ 2695 (3.4%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 50892 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  4.74 MBytes  3.97 Mbits/sec
+[  3] Sent 3383 datagrams
+[  3] Server Report:
+[  3]  0.0-10.2 sec  4.74 MBytes  3.89 Mbits/sec   6.567 ms    0/ 3383 (0%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 48872 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  3.80 MBytes  3.16 Mbits/sec
+[  3] Sent 2714 datagrams
+[  3] Server Report:
+[  3]  0.0-10.4 sec  3.80 MBytes  3.05 Mbits/sec  13.938 ms    1/ 2714 (0.037%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 53598 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  2.71 MBytes  2.24 Mbits/sec
+[  3] Sent 1932 datagrams
+[  3] Server Report:
+[  3]  0.0-10.4 sec  2.61 MBytes  2.11 Mbits/sec  24.712 ms   70/ 1932 (3.6%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 58856 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.10 MBytes  2.60 Mbits/sec
+[  3] Sent 2212 datagrams
+[  3] Server Report:
+[  3]  0.0-10.3 sec  3.01 MBytes  2.45 Mbits/sec  10.741 ms   63/ 2212 (2.8%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 45911 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.4 sec  2.75 MBytes  2.21 Mbits/sec
+[  3] Sent 1965 datagrams
+[  3] Server Report:
+[  3]  0.0-11.9 sec  2.61 MBytes  1.84 Mbits/sec  37.629 ms  105/ 1965 (5.3%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 55166 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.0 sec  3.08 MBytes  2.58 Mbits/sec
+[  3] Sent 2194 datagrams
+[  3] Server Report:
+[  3]  0.0-10.2 sec  2.72 MBytes  2.23 Mbits/sec  10.208 ms  253/ 2194 (12%)
+pi@raspberrypi:~ $ iperf -c 192.168.1.1 -u -b 20m
+------------------------------------------------------------
+Client connecting to 192.168.1.1, UDP port 5001
+Sending 1470 byte datagrams, IPG target: 588.00 us (kalman adjust)
+UDP buffer size:  160 KByte (default)
+------------------------------------------------------------
+[  3] local 192.168.1.2 port 53944 connected with 192.168.1.1 port 5001
+[ ID] Interval       Transfer     Bandwidth
+[  3]  0.0-10.1 sec  4.54 MBytes  3.78 Mbits/sec
+[  3] Sent 3237 datagrams
+[  3] Server Report:
+[  3]  0.0-10.5 sec  4.06 MBytes  3.25 Mbits/sec   9.787 ms  342/ 3237 (11%)
+pi@raspberrypi:~ $ ^C
+pi@raspberrypi:~ $ 
